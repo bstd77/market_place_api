@@ -1,6 +1,14 @@
 module Authenticable
 
-	#Devise methods overwrites
+	#Example code for actual site
+	#def current_user
+	#	if request.headers['Authorization'].present?
+	#		@current_user ||= User.find_by(auth_token: request.headers['Authorization'])
+	#	else
+	#		super
+	#	end
+	#end
+
 	def current_user
 		@current_user ||= User.find_by(auth_token: request.headers['Authorization'])
 	end
