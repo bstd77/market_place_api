@@ -19,6 +19,13 @@ gem 'jquery-rails'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
 
+gem 'devise'
+gem 'sabisu_rails', github: "IcaliaLabs/sabisu-rails"
+gem 'compass-rails'
+gem 'furatto'
+gem 'font-awesome-rails'
+gem 'simple_form'
+
 group :doc do
 # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -42,7 +49,7 @@ group :development, :test do
   gem "rspec-rails", "~> 2.14"
   gem "factory_girl_rails"
   gem 'ffaker'
-
+  gem "shoulda-matchers"
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
