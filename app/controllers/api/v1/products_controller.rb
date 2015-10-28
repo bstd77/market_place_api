@@ -7,8 +7,8 @@ class Api::V1::ProductsController < ApplicationController
 	end
 
 	def index
-		respond_with Product.all
-	end
+    respond_with Product.search(params)
+  end
 
 	def create
 		product = current_user.products.build(product_params)
