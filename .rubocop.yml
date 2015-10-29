@@ -1,0 +1,13 @@
+Style/Tab:
+  Enabled: false
+
+Style/IndentationWidth:
+  Description: 'Use 2 spaces for indentation.'
+  StyleGuide: 'https://github.com/bbatsov/ruby-style-guide#spaces-indentation'
+  Enabled: false
+
+AllCops:
+  RunRailsCops: true
+
+Style/IfUnlessModifier:
+  MaxLineLength: 160

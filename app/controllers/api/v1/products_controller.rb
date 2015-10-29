@@ -6,14 +6,14 @@ class Api::V1::ProductsController < ApplicationController
 		respond_with Product.find(params[:id])
 	end
 
-	def index
+  def index
     respond_with Product.search(params)
   end
 
 	def create
 		product = current_user.products.build(product_params)
 		if product.save
-			render json: product, status: 201, location: [:api, product]
+      render json: product, status: 201, location: [:api, product]
 		else
 			render json: { errors: product.errors }, status: 422
 		end
@@ -31,13 +31,12 @@ class Api::V1::ProductsController < ApplicationController
 	def destroy
 		product = current_user.products.find(params[:id])
 		product.destroy
-		head 204
+    head 204
 	end
 
-	private
+  private
 
-		def product_params
+    def product_params
 			params.require(:product).permit(:title, :price, :published)
-		end
-
+    end
 end
