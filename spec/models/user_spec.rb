@@ -14,6 +14,7 @@ describe User do
 	it { should validate_uniqueness_of(:auth_token) }
 
 	it { should have_many(:products) }
+  it { should have_many(:order) }
 
 	describe "#generates_authentication_token!" do
 		it "generates a unique token" do
